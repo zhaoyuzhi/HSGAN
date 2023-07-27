@@ -17,8 +17,7 @@ if __name__ == "__main__":
     parser.add_argument('--data_type', type = str, default = 'arad', help = 'data_type, 5 datasets')
     parser.add_argument('--process_type', type = str, default = 'gen', help = 'process_type, 3 settings')
     parser.add_argument('--network_type', type = str, default = 'awan', help = 'network_type')
-    parser.add_argument('--load_name', type = str, default = './models/G_epoch10000_bs4.pth', \
-            help = 'load the pre-trained model with certain epoch, None for pre-training')
+    parser.add_argument('--load_name', type = str, default = './models/G_epoch10000_bs4.pth', help = 'load the pre-trained model with certain epoch, None for pre-training')
     parser.add_argument('--test_batch_size', type = int, default = 1, help = 'size of the testing batches for single GPU')
     parser.add_argument('--num_workers', type = int, default = 0, help = 'number of cpu threads to use during batch generation')
     parser.add_argument('--val_path', type = str, default = './validation', help = 'saving path that is a folder')
@@ -33,10 +32,8 @@ if __name__ == "__main__":
     parser.add_argument('--start_channels', type = int, default = 64, help = 'start channels for generator')
     parser.add_argument('--latent_channels', type = int, default = 16, help = 'latent channels for generator')
     # Dataset parameters
-    parser.add_argument('--baseroot_train', type = str, \
-        default = 'E:\\dataset, task related\\Hyperspectral Imaging\\ICVL\\train', help = 'baseroot')
-    parser.add_argument('--baseroot_val', type = str, \
-        default = 'E:\\dataset, task related\\Hyperspectral Imaging\\ICVL\\val', help = 'baseroot')
+    parser.add_argument('--baseroot_train', type = str, default = './dataset/ICVL/train', help = 'baseroot')
+    parser.add_argument('--baseroot_val', type = str, default = './dataset/ICVL/val', help = 'baseroot')
     parser.add_argument('--crop_size', type = int, default = 256, help = 'crop size')
     opt = parser.parse_args()
     print(opt)

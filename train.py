@@ -43,8 +43,8 @@ if __name__ == "__main__":
     parser.add_argument('--init_type', type = str, default = 'xavier', help = 'initialization type of generator')
     parser.add_argument('--init_gain', type = float, default = 0.02, help = 'initialization gain of generator')
     # Dataset parameters
-    parser.add_argument('--baseroot_train', type = str, default = '/mnt/lustre/zhaoyuzhi/dataset/CAVE/train', help = 'baseroot')
-    parser.add_argument('--baseroot_val', type = str, default = '/mnt/lustre/zhaoyuzhi/dataset/CAVE/val', help = 'baseroot')
+    parser.add_argument('--baseroot_train', type = str, default = './dataset/CAVE/train', help = 'baseroot')
+    parser.add_argument('--baseroot_val', type = str, default = './dataset/CAVE/val', help = 'baseroot')
     parser.add_argument('--crop_size', type = int, default = 256, help = 'crop size')
     opt = parser.parse_args()
     print(opt)
@@ -53,4 +53,5 @@ if __name__ == "__main__":
     #                 Trainer
     # ----------------------------------------
     trainer.Trainer(opt)
+    #trainer.Trainer_GAN(opt)
     
